@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["bhaberer@gmail.com"]
   gem.description   = %q{Cinch Plugin to fetch definition data from Urban Dictionary}
   gem.summary       = %q{Cinch Plugin for Urban Dictionary}
-  gem.homepage      = "ihttps://github.com/bhaberer/cinch-urbandict"
+  gem.homepage      = "https://github.com/bhaberer/cinch-urbandict"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
