@@ -1,6 +1,6 @@
-# Cinch::Urbandict
+# Cinch::Plugins::Urbandict
 
-TODO: Write a gem description
+Simple Cinch Plugin to fetch Urbandictionary defs.
 
 ## Installation
 
@@ -18,7 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Just add the plugin to your list:
+
+    @bot = Cinch::Bot.new do
+      configure do |c|
+        c.plugins.plugins = [Cinch::Plugins::UrbanDict]
+      end
+    end
+
+Then in channel use:
+
+    .ud kitten
 
 ## Contributing
 
