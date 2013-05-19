@@ -17,6 +17,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_dependency 'cinch-toolbox'
-  gem.add_dependency 'cinch-cooldown'
+  gem.add_dependency('cinch-toolbox', '>= 0.0.3')
+  gem.add_dependency('cinch-cooldown')
 end
