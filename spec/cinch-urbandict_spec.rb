@@ -23,7 +23,9 @@ describe Cinch::Plugins::UrbanDict do
   end
 
   it 'should not eturn multiple lines for a definition with breaks' do
-    @plugin.send(:get_def, 'dong').
-      should_not match("\n")
+    response = @plugin.send(:get_def, 'dong')
+    response.should_not match("<br")
+    response.should_not match("\r")
+    response.should_not match("\n")
   end
 end

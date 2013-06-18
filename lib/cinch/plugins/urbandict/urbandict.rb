@@ -31,6 +31,8 @@ module Cinch::Plugins
         # Grab the element
         result = Cinch::Toolbox.get_html_element(url, '.definition')
 
+        result.gsub!(/[\n\r]/, ' - ')
+
         #Make sure it's not terribly long
         result = Cinch::Toolbox.truncate(result, 250)
         url = Cinch::Toolbox.shorten(url)
