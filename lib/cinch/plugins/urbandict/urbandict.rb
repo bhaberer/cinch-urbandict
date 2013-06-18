@@ -14,7 +14,7 @@ module Cinch::Plugins
     match /ud (.*)/
 
     def execute(m, term)
-      m.reply get_def(term)
+      m.reply get_def(term), true
     end
 
     private
@@ -25,16 +25,20 @@ module Cinch::Plugins
 
       url = "http://www.urbandictionary.com/define.php?term=#{term}"
 
-      # Grab the element
-      result = Cinch::Toolbox.get_html_element(url, '.definition')
+      if Cinch::Toolbox.get_html_element(url, '#not_defined_yet')
+        return "Urban Dictionary ∴ #{term}: No definition available."
+      else
+        # Grab the element
+        result = Cinch::Toolbox.get_html_element(url, '.definition')
 
-      #Make sure it's not terribly long
-      result = Cinch::Toolbox.truncate(result, 250)
+        #Make sure it's not terribly long
+        result = Cinch::Toolbox.truncate(result, 250)
+        url = Cinch::Toolbox.shorten(url)
 
-      return "Urban Dictionary ∴ #{term}: #{result} [#{Cinch::Toolbox.shorten(url)}]"
+        return "Urban Dictionary ∴ #{term}: #{result} [#{url}]"
+      end
     rescue NoMethodError
       debug "Caught a NoMethodError looking up #{term}"
-      return "Sorry I couldn't find that term."
     end
   end
 end
