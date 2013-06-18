@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+require 'cinch'
 require 'cinch-cooldown'
 require 'cinch-toolbox'
 
@@ -9,6 +10,7 @@ module Cinch::Plugins
     enforce_cooldown
 
     self.help = "Use .ud <term> to see the Urban Dictionary definition for that term."
+
     match /ud (.*)/
 
     def execute(m, term)

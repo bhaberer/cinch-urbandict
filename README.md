@@ -1,5 +1,11 @@
 # Cinch::Plugins::Urbandict
 
+[![Gem Version](https://badge.fury.io/rb/cinch-urbandict.png)](http://badge.fury.io/rb/cinch-urbandict)
+[![Dependency Status](https://gemnasium.com/bhaberer/cinch-urbandict.png)](https://gemnasium.com/bhaberer/cinch-urbandict)
+[![Build Status](https://travis-ci.org/bhaberer/cinch-urbandict.png?branch=master)](https://travis-ci.org/bhaberer/cinch-urbandict)
+[![Coverage Status](https://coveralls.io/repos/bhaberer/cinch-urbandict/badge.png?branch=master)](https://coveralls.io/r/bhaberer/cinch-urbandict?branch=master)
+[![Code Climate](https://codeclimate.com/github/bhaberer/cinch-urbandict.png)](https://codeclimate.com/github/bhaberer/cinch-urbandict)
+
 Simple Cinch Plugin to fetch Urbandictionary defs.
 
 ## Installation
