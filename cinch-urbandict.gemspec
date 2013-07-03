@@ -20,8 +20,9 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
   gem.add_development_dependency 'coveralls'
+  gem.add_development_dependency 'cinch-test'
 
   gem.add_dependency 'cinch',           '~> 2.0.4'
-  gem.add_dependency 'cinch-toolbox',   '>= 1.0.0'
+  gem.add_dependency 'cinch-toolbox',   '>= 1.0.2'
   gem.add_dependency 'cinch-cooldown',  '~> 1.0.0'
 end

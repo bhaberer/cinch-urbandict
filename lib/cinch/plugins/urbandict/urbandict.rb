@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'cinch'
 require 'cinch-cooldown'
-require 'cinch-toolbox'
+require 'cinch/toolbox'
 
 module Cinch::Plugins
   class UrbanDict
