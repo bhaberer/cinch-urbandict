@@ -26,7 +26,8 @@ module Cinch
         term = URI.escape(term, Regexp.new("[^#{URI::PATTERN::UNRESERVED}]"))
 
         # Check if it's not defined.
-        if Cinch::Toolbox.get_html_element(ud_url(term), '#not_defined_yet')
+        check = Cinch::Toolbox.get_html_element(ud_url(term), '.word')
+        if check && check == '¯\_(ツ)_/¯'
           return "Urban Dictionary ∴ #{term}: No definition available."
         end
 
